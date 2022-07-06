@@ -1,0 +1,27 @@
+.product {
+  height: 500px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.product > img {
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+}
+.product:hover {
+  transform: scale(0.98);
+}
+.product__info > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+}
+.gray-color {
+  color: gray;
+}
+@media screen and (max-width: 600px) {
+  .product {
+    height: auto;
+  }
+}

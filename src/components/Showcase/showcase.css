@@ -1,0 +1,47 @@
+/* .showcase {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 630px;
+  width: 100%;
+  color: var(--light-color);
+} */
+.showcase {
+  margin-top: 70px;
+  background: url("https://cdn.shopify.com/s/files/1/0566/0839/1368/files/Overlays_D._Version_1920x.jpg?v=1655817325")
+    no-repeat center center/cover;
+  height: 630px;
+  width: 100%;
+}
+.showcase__content {
+  height: 630px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.showcase__content > button {
+  margin: 20px 0;
+  border-radius: 0px;
+  padding: 0.4rem 2rem;
+}
+.showcase__content > p {
+  margin: 0;
+  color: var(--light-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 300;
+}
+.showcase__content > h4 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
+  margin-top: 10rem;
+}

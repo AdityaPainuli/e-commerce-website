@@ -1,22 +1,15 @@
 import "./App.css";
-import { Navbar, RowProducts, Showcase, Footer } from "./components";
-
+import { Navbar, RowProducts, Showcase, Footer, CTA } from "./components";
+import { men_product_data } from "./media/data";
+import { women_product_data } from "./media/data";
 function App() {
   return (
     <div className="App">
-      {/* <h1>Hello e-commerce website.</h1>
-      <p className="lead-color">
-        Hello there, it's a dummy text here.QUALITY PRODUCTS We always go for
-        the best. Premium product and no quality compromise.
-      </p>
-      <button>Check out</button>
-      <button className="btn-dark">Check out</button>
-      <button className="btn-light">Check out</button>
-      <span className="cutted">$1300</span>
-      <span>$1000</span> */}
       <Navbar />
-      <RowProducts />
       <Showcase />
+      <RowProducts title="Men Best Wears" list={men_product_data} />
+      <RowProducts title="Women Best Wears" list={women_product_data} />
+      <CTA />
       <Footer />
     </div>
   );

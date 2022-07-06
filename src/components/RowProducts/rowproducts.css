@@ -1,0 +1,22 @@
+.row__products {
+  margin: 20px 0;
+}
+.row__products > h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.product__section {
+  width: 90%;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .product__section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
