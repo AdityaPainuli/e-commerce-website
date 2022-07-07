@@ -3,12 +3,14 @@
   width: 100%;
   cursor: pointer;
   transition: all 0.5s ease;
+  position: relative;
 }
 .product > img {
   width: 100%;
   object-fit: contain;
   transition: all 0.5s ease;
 }
+
 .product:hover {
   transform: scale(0.98);
 }
@@ -19,6 +21,22 @@
 }
 .gray-color {
   color: gray;
+}
+.product-btn-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 79%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.product:hover > .product-btn-container {
+  opacity: 1;
 }
 @media screen and (max-width: 600px) {
   .product {

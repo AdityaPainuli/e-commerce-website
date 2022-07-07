@@ -1,3 +1,5 @@
+import nanoId from "nano-id";
+
 const men_product_data = [
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/3.-min.jpg?v=1655814519",
@@ -5,6 +7,7 @@ const men_product_data = [
     product_variant: "T-Shirt",
     cut_price: 1399.0,
     price: 700.0,
+    id: nanoId(),
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/5-min_681a8745-976e-4ba0-baa3-75a22a079a5a_540x.jpg?v=1655810408",
@@ -12,6 +15,7 @@ const men_product_data = [
     product_variant: "T-shirt",
     cut_price: 2344.0,
     price: 1007.0,
+    id: nanoId(),
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/4-min_57c566a6-dea3-4825-8b71-a08f7d9ffc7d.jpg?v=1655806774",
@@ -19,6 +23,7 @@ const men_product_data = [
     product_variant: "Gradient T-shirt",
     cut_price: 1199.0,
     price: 599.0,
+    id: nanoId(),
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/6-min.jpg?v=1655800090",
@@ -26,6 +31,7 @@ const men_product_data = [
     product_variant: "Supima T-shirt",
     cut_price: 1499.0,
     price: 999.0,
+    id: nanoId(),
   },
 ];
 
@@ -36,6 +42,7 @@ const women_product_data = [
     product_variant: "TOP",
     cut_price: 999.0,
     price: 599.0,
+    id: nanoId(),
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/8-min_01a38f83-d5cf-474b-8247-29719524a200_540x.jpg?v=1655812561",
@@ -43,6 +50,7 @@ const women_product_data = [
     product_variant: "T-shirt",
     cut_price: 1599.0,
     price: 999.0,
+    id: nanoId(),
   },
   {
     img: "https://cdn.shopify.com/s/files/1/0566/0839/1368/products/2-min_a095a2a8-380d-41cd-93ed-070e07f86f73_540x.jpg?v=1655813243",
@@ -50,6 +58,7 @@ const women_product_data = [
     product_variant: "T-shirt",
     cut_price: 1399.0,
     price: 699.0,
+    id: nanoId(),
   },
 ];
 
