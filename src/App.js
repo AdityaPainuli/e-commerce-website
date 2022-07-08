@@ -4,6 +4,7 @@ import { men_product_data } from "./media/data";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { women_product_data } from "./media/data";
 import { useState } from "react";
+import CartComponent from "./Cart/CartComponent";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -39,8 +40,8 @@ function App() {
             path="/cart"
             element={
               <div>
-                <Navbar />
-                <h1>Hello carts page</h1>
+                <Navbar cart={cart} />
+                <CartComponent cart={cart} setCart={setCart} />
               </div>
             }
           />
@@ -48,7 +49,7 @@ function App() {
             path="/login-signup"
             element={
               <div>
-                <Navbar />
+                <Navbar cart={cart} />
                 <h1>Login page.</h1>
               </div>
             }

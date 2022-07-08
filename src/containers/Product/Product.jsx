@@ -30,7 +30,9 @@ function Product({
           className="btn-light product-btn"
           onClick={() => {
             const new_product = product_list.filter((c) => c.id === id);
-            setCart([...cart, new_product]);
+            // setCart([...cart, new_product]);
+            const new_cart = [...cart, new_product];
+            setCart(new_cart);
           }}
         >
           Add to Cart.
