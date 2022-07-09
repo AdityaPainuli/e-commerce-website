@@ -2,7 +2,7 @@ import React from "react";
 import "./cart.css";
 import { AiFillInfoCircle } from "react-icons/ai";
 
-const CartComponent = ({ cart, setCart }) => {
+const CartComponent = ({ cart, setCart, username }) => {
   const removeFromBasket = (id) => {
     const FirstProductIndex = cart.findIndex((c) => c[0].id === id);
     const new_cart = [...cart];
@@ -17,6 +17,7 @@ const CartComponent = ({ cart, setCart }) => {
     <div className="cart__section">
       <div className="cart__section-details">
         <h2>Your Cart🛒🛒</h2>
+        <p>Hey, {username} 👋👋</p>
       </div>
       {cart.map((products) => (
         <div className="products__section">

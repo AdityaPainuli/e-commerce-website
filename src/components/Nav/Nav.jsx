@@ -2,7 +2,7 @@ import "./nav.css";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-const Navbar = ({ cart }) => {
+const Navbar = ({ cart, username }) => {
   return (
     <nav>
       <div className="navbar__logo">
@@ -12,7 +12,8 @@ const Navbar = ({ cart }) => {
       </div>
 
       <div className="navbar__icons">
-        <Link to="/login-signup">
+        <Link to="/login-signup" className="cart-container">
+          <p>Hey,{username}</p>
           <BiUser className="icon" />
         </Link>
         <Link to="/cart" className="cart-container">

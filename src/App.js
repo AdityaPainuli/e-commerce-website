@@ -4,10 +4,21 @@ import { men_product_data } from "./media/data";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { women_product_data } from "./media/data";
 import { useState } from "react";
+import Login from "./Login/Login";
 import CartComponent from "./Cart/CartComponent";
+import { auth } from "./firebase";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [userEmail, setUserEmail] = useState("");
+
+  const LoogedUser = () => {
+    const user = auth.currentUser;
+    if (user !== null) {
+      const email = user.email;
+      setUserEmail(email);
+    }
+  };
 
   return (
     <div className="App">
@@ -17,7 +28,7 @@ function App() {
             path="/"
             element={
               <div>
-                <Navbar cart={cart} />
+                <Navbar cart={cart} username={userEmail} />
                 <Showcase />
                 <RowProducts
                   title="Men Best Wears"
@@ -40,8 +51,12 @@ function App() {
             path="/cart"
             element={
               <div>
-                <Navbar cart={cart} />
-                <CartComponent cart={cart} setCart={setCart} />
+                <Navbar cart={cart} username={userEmail} />
+                <CartComponent
+                  cart={cart}
+                  setCart={setCart}
+                  username={userEmail}
+                />
               </div>
             }
           />
@@ -49,8 +64,8 @@ function App() {
             path="/login-signup"
             element={
               <div>
-                <Navbar cart={cart} />
-                <h1>Login page.</h1>
+                <Navbar cart={cart} username={userEmail} />
+                <Login loogedUser={LoogedUser} />
               </div>
             }
           />
